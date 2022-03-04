@@ -33,4 +33,12 @@ public class Cart {
 
         return stringBuilder.toString();
     }
+
+    public Item getItem(String productId){
+        for(var i : items){
+            if(i.getProduct().getId().equals(productId))
+                return i;
+        }
+        return null;
+    }
 }
